@@ -1,0 +1,9 @@
+services:
+  anomaly-detection-mvp:
+    build: .
+    container_name: anomaly-detection-mvp
+    ports:
+      - "8502:8501"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
